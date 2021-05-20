@@ -1,0 +1,63 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+}
+
+.menu-container{
+    height : 4rem;
+    background-color: lightpink;
+}
+.formula-container{
+    height : 2rem;
+    background-color: lightcoral;
+}
+.grid-container{
+    border : 1px solid red;
+    height: calc(100vh - ( 4rem + 2rem + 2rem));  
+    /* rem is used where we have to keep the screen size fixed and vh/vw are used
+       where we have to change the area w.r.t screen. */
+    background-color: lightgreen;                
+}
+.sheet-container{
+    background-color: lightblue;
+    display: flex; 
+     /* flex aligns the boxes horizonatlly, if there are many boxes then it compresses the width and aligns them.
+     lekin agar box ki width reduce nahi karwaani to we use "min-height: " */
+    height: 2rem;
+}
+.add-btn-container {
+    width: 3rem;
+    border: 1 px solid;
+    height: 100%;
+    padding-top: 0.2rem;
+    padding-left: 0.3rem;
+}
+.sheet-list{
+    width: calc(100vw - 3rem);
+    border: 1px solid;
+    display: flex;
+    height:100%;
+    overflow : auto;
+}
+/* to hide scrollbar but still it should be working
+ code copied from w3school  */
+.sheet-list::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .sheet-list {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+.sheet {
+    min-width: 5rem;
+    border: 1 px solid blue;
+    height: 100%;
+    background-color: gray;
+}
+.active{
+    background-color: white;
+}
