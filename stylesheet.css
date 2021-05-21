@@ -18,8 +18,39 @@ body {
     height: calc(100vh - ( 4rem + 2rem + 2rem));  
     /* rem is used where we have to keep the screen size fixed and vh/vw are used
        where we have to change the area w.r.t screen. */
-    background-color: lightgreen;                
+    background-color: lightgreen;  
+    overflow:auto;              
 }
+.box{
+    height:2rem;
+    width:2rem;
+    border:1px solid;
+    text-align:center;
+}
+.left_box{
+    background-color: gray;
+}
+.top_row{
+    height:2rem;
+    /* background-color: green; */
+    display: flex;    
+    /* is se text ek ke baad ek aa jaayega a b c d.... */
+}
+.grid{
+  
+    background-color: lightblue;
+    
+}
+.row{
+    display: flex;
+}
+.cell{
+    border: 1px solid;
+    min-width: 4rem;
+    text-align: center;
+}
+
+/* sheets */
 .sheet-container{
     background-color: lightblue;
     display: flex; 
@@ -39,7 +70,7 @@ body {
     border: 1px solid;
     display: flex;
     height:100%;
-    overflow : auto;
+    /* overflow : auto; */
 }
 /* to hide scrollbar but still it should be working
  code copied from w3school  */
