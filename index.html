@@ -6,10 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="stylesheet.css">
+    
 </head>
 <body>
-    <div class="menu-container">MenuContainer</div>
-    <div class="formula-container">Formula</div>
+    <div class="menu-container">
+        <!-- select->option -->
+        <select class="font-size">
+            <option value="12">12</option>
+            <option value="16" selected>16</option>
+            <option value="18">18</option>
+            <option value="20">20</option>
+        </select>
+        </select->
+        <select class="font-family">
+            <option value="monospace">monospace</option>
+            <option value="sans-serif" selected>sans-serif</option>             <!-- selected is used to display default value in select option menu -->
+            <option value="Geogia">Georgia</option>
+            <option value="fantasy">fantasy</option>
+        </select>
+        <div class="bui-container">
+            <input type="button" class="bold" value="B">
+            <input type="button" class="underline" value="U">
+            <input type="button" class="italic" value="I">
+        </div>
+        <div class="align-container">
+            <input type="button" class="left" value="L">
+            <input type="button" class="center" value="C">
+            <input type="button" class="right" value="R">
+        </div>
+        <div class="color-container">
+            <input type="color" class="color">
+            <input type="color" class="bg-color">
+        </div>
+    </div>
+    <div class="formula-container">
+        <!-- input.address-input+input.formula-input -->
+        <input type="text" class="address-input" readonly>         
+        <!-- readonly:- to make input box only readable not writeable -->
+        <input type="text" class="formula-input">
+    </div>
     <div class="grid-container">
         <div class="left_box box"></div>
         <div class="top_row"></div>

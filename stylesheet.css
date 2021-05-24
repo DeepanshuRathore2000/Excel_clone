@@ -6,20 +6,56 @@ body {
 }
 
 .menu-container{
-    height : 4rem;
+    height : 3rem;
     background-color: lightpink;
+    align-items: center;
+    display:flex;
+    gap:0.5rem;
+    padding-left:0.5rem;
+}
+.menu-container *{
+    border: 1px solid;
+    height:60%;
+}
+.font-size{
+    width:5%;
+}
+.font-family{
+    width: 21%;
+}
+.bui-container{
+    width: 21%;
+    display:flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+}
+.bui-container>*{
+    width:30%;
+    height:80%;
+    
+}
+.align-container{
+    width:14%;
+}
+.color-container{
+    width:10%;
 }
 .formula-container{
     height : 2rem;
     background-color: lightcoral;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
 }
 .grid-container{
     border : 1px solid red;
-    height: calc(100vh - ( 4rem + 2rem + 2rem));  
+    height: calc(100vh - ( 3rem + 2rem + 2rem));  
     /* rem is used where we have to keep the screen size fixed and vh/vw are used
        where we have to change the area w.r.t screen. */
     background-color: lightgreen;  
     overflow:auto;              
+    position:relative;
 }
 .box{
     height:2rem;
@@ -33,12 +69,28 @@ body {
 .top_row{
     height:2rem;
     /* background-color: green; */
-    display: flex;    
-    /* is se text ek ke baad ek aa jaayega a b c d.... */
+    display: flex;  /* is se text ek ke baad ek aa jaayega a b c d.... */    
+    /* position dene ka best tareeka-> parent ki pos. realtive rakho or child ki pos. absolute krdo or apne hisaab se fir pos. dedeo(top,left,right etc) */
+    position: absolute;
+    top:0%;
+    left:2rem;
+}
+.formula-container > * {
+    height : 70%;
+ 
+    
+}
+.address-input{
+    width: 4rem;
+}
+.formula-input{
+    width:calc( 100vw - 6rem); 
 }
 .grid{
-  
+    position:absolute;
     background-color: lightblue;
+    left:2rem;
+    top:2em;
     
 }
 .row{
@@ -48,6 +100,7 @@ body {
     border: 1px solid;
     min-width: 4rem;
     text-align: center;
+    height: 2rem;
 }
 
 /* sheets */
@@ -91,4 +144,7 @@ body {
 }
 .active{
     background-color: white;
+}
+.active-btn{
+    background-color: gray;
 }
