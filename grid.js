@@ -8,6 +8,7 @@ let underlineBtn = document.querySelector(".underline");
 let italicBtn = document.querySelector(".italic");
 let alignBtn = document.querySelectorAll(".align-container>*");
 let fontSizeElem = document.querySelector(".font-size");
+let formulaBar = document.querySelector(".formula-input");
 let rows = 100;
 let cols = 26;
 /*leftcol*/
@@ -41,7 +42,7 @@ for (let i = 0; i < rows; i++) {
     }
     grid.appendChild(row);   
 }
-
+//database
 let sheetDB = [];
 for(let i=0;i<rows;i++){
     let row = [];
@@ -54,7 +55,9 @@ for(let i=0;i<rows;i++){
             fontFamily:"sans-serif",              // cells object ka data
             fontSize:"16",
             color:"black",
-            bgColor:"none"
+            bgColor:"none",
+            value:  "",
+            formula: ""
         }
         row.push(cell);                //row ke andar cells
     }
@@ -96,20 +99,6 @@ for(let i=0; i<allCells.length ;i++){
     })
 }
 
-
-function findUICellElement(){
-    let address = addressInput.value;
-    let ridcidObj = getRIDCIDfromAddress(address);
-    let rid = ridcidObj.rid;
-    let cid = ridcidObj.cid;
-    let uiCellElement = document.querySelector(`.cell[rid="${rid}"][cid="${cid}"]`);
-    return uiCellElement;
-}
-function getRIDCIDfromAddress(address){
-    let cid = Number(address.charCodeAt(0))-65;
-    let rid = Number(address.slice(1))-1;
-    return {"rid":rid,"cid":cid};
-}
 // bold,underline,italic
 boldBtn.addEventListener("click", function (){
     // jispe click krein -> usey bold krdo
