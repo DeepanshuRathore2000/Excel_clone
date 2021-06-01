@@ -56,8 +56,9 @@ for(let i=0;i<rows;i++){
             fontSize:"16",
             color:"black",
             bgColor:"none",
-            value:  "",
-            formula: ""
+            value:"",
+            formula: "",
+            children: []
         }
         row.push(cell);                //row ke andar cells
     }
@@ -96,8 +97,16 @@ for(let i=0; i<allCells.length ;i++){
         } else{
             italicBtn.classList.add("active-btn");
         }
+        // to clear formulabar area
+        if (cellObject.formula){                                 
+            formulaBar.value = cellObject.formula;
+        }
+        else{
+            formulaBar.value="";
+        }
     })
 }
+
 
 // bold,underline,italic
 boldBtn.addEventListener("click", function (){
